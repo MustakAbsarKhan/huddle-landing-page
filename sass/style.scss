@@ -3,9 +3,37 @@
 body{
     margin: 0;
     padding: 0;
+    @include p.breakpoint-down(medium){
+        width: p.pxtoem(375);
+    };
 }
 
 .container{
-   background: p.color(Violet-col);
-   
+    //mobile view
+    @include p.breakpoint-down(medium){
+        background: p.color(Violet-col) url(/images/bg-mobile.svg) no-repeat;
+    };
+    & .logo >img{
+        @include p.breakpoint-down(medium){
+            height: p.pxtoem(21);
+            width: p.pxtoem(122);
+            margin: p.pxtoem(40) p.pxtoem(0) p.pxtoem(72) p.pxtoem(40);
+        };
+    }
+    & .body-img>img{
+        @include p.breakpoint-down(medium){
+            height: p.pxtoem(213);
+            width: p.pxtoem(298);
+            margin: p.pxtoem(0) p.pxtoem(39) p.pxtoem(71) p.pxtoem(38);
+        };
+    };
+    & .middle-body>.body-text{
+        @include p.breakpoint-down(medium){
+            width: p.pxtoem(262);
+            & h1{
+                font-size: p.pxtoem(22);
+                text-align: center;          
+            }
+        };
+    };
 };
