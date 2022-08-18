@@ -1,0 +1,11 @@
+@use "partials" as p;
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+   background: p.color(Violet-col);
+   
+};

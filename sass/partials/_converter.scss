@@ -1,0 +1,5 @@
+@use 'sass:math';
+//converting px to em
+@function pxtoem($px){
+   @return math.div($px,16)+em;
+};

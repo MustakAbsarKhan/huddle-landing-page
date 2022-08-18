@@ -1,0 +1,8 @@
+$color:(
+    "Violet-col": hsl(257, 40%, 49%),
+    "Soft-Magenta-col": hsl(300, 69%, 71%)
+);
+
+@function color($color-name){
+    @return map-get($map: $color, $key: $color-name);
+};
