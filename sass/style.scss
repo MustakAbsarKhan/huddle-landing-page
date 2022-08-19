@@ -1,13 +1,14 @@
 @use "partials" as p;
 
 body{
+    //for mobile 375px
     @include p.breakpoint-down(ultsmall){
         width: p.pxtoem(375);
     };
 };
 
 .container{
-    //mobile view
+    //mobile view - 375px
     @include p.breakpoint-down(ultsmall){
         display: grid;
         grid-template-columns: auto;
