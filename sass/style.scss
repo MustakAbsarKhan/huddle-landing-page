@@ -1,95 +1,100 @@
 @use "partials" as p;
 
 body{
-    @include p.breakpoint-down(medium){
+    @include p.breakpoint-down(ultsmall){
         width: p.pxtoem(375);
     };
 };
 
 .container{
     //mobile view
-    @include p.breakpoint-down(medium){
+    @include p.breakpoint-down(ultsmall){
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: auto auto auto auto auto;
         background: p.color(Violet-col) url(/images/bg-mobile.svg) no-repeat;
-    };
-    & .logo >img{
-        @include p.breakpoint-down(medium){
+
+        & .logo >a>img{
             height: p.pxtoem(20);
             margin: p.pxtoem(35) 0 p.pxtoem(55) p.pxtoem(37);
         };
-    }
-    & .body-img>img{
-        @include p.breakpoint-down(medium){
+        & .body-img>img{
             height: p.pxtoem(211);
             width: p.pxtoem(298);
             margin-left: p.pxtoem(38.5);
             margin-bottom: p.pxtoem(50);
         };
-    };
-    & .middle-body{
-        @include p.breakpoint-down(medium){
-            display: grid;
-            grid-template-columns: auto;
-            grid-template-rows: auto auto auto;
-            text-align: center;
-            & .body-text{
-                & h1{
-                    font-size: p.pxtoem(20);
-                    margin-left: p.pxtoem(55);  
-                    margin-right: p.pxtoem(55);        
+        & .middle-body{
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto auto auto;
+                text-align: center;
+                & .body-text{
+                    & h1{
+                        font-size: p.pxtoem(20);
+                        margin-left: p.pxtoem(55);  
+                        margin-right: p.pxtoem(55);        
+                    };
+                    & p{
+                        font-size: p.pxtoem(15);
+                        margin-left: p.pxtoem(50);
+                        margin-right: p.pxtoem(50);
+                    };
                 };
-                & p{
-                    font-size: p.pxtoem(15);
-                    margin-left: p.pxtoem(50);
-                    margin-right: p.pxtoem(50);
-                };
-            };
         };
-    };
-    & .body-button>button{
-        margin-top: p.pxtoem(28);
-        margin-bottom: p.pxtoem(65);
-        text-align:center;
-        background-color: p.color(text-color);
-        color: p.color(Violet-col);
-        height: p.pxtoem(43);
-        width: p.pxtoem(204);
-        border-radius: 20px;
-        border: none;
-        box-shadow:0px 1px 5px rgb(43, 42, 42);
-        font-family: 'Open Sans', sans-serif;
-
-        &:hover{
-            background-color: p.color(Soft-Magenta-col);
-            color:p.color(text-color);
-        };
-    };
-    & .footer{
-        display: flex;
-        gap:p.pxtoem(10);
-        justify-content: center;
-        margin-bottom: p.pxtoem(40);
-        & .icon:first-child{
-            height: p.pxtoem(35);
-            padding: 5px 9px 5px 9px;
-        };
-        & .icon{
-            height: p.pxtoem(35);
-            padding: 5px;
-            border: 2px solid p.color(text-color);
-            border-radius: 30px;
+        & .body-button>button{
+            margin-top: p.pxtoem(28);
+            margin-bottom: p.pxtoem(65);
+            text-align:center;
+            background-color: p.color(text-color);
+            color: p.color(Violet-col);
+            height: p.pxtoem(43);
+            width: p.pxtoem(204);
+            border-radius: 20px;
+            border: none;
+            box-shadow:0px 1px 5px rgb(43, 42, 42);
+            font-family: 'Open Sans', sans-serif;
+    
             &:hover{
                 background-color: p.color(Soft-Magenta-col);
                 color:p.color(text-color);
             };
         };
+        & .footer{
+            display: flex;
+            gap:p.pxtoem(10);
+            justify-content: center;
+            margin-bottom: p.pxtoem(40);
+            & #icon-1{
+                height: p.pxtoem(35);
+                padding: 5px 9px 5px 9px;
+            };
+            & .icon{
+                height: p.pxtoem(35);
+                padding: 5px;
+                border: 2px solid p.color(text-color);
+                border-radius: 30px;
+                &:hover{
+                    background-color: p.color(Soft-Magenta-col);
+                    color:p.color(text-color);
+                };
+            };
+        };
+        & .devinfo{
+            text-align: center;
+            margin-bottom: p.pxtoem(40);
+            font-size: p.pxtoem(10);
+            font-family: 'Open Sans', sans-serif;
+            
+            & >a{
+                color:p.color(Soft-Magenta-col);
+                text-decoration: none;
+            }
+            & >a:hover{
+                color:p.color(text-color);
+                text-decoration: underline;
+            };
+        };
     };
-    & .devinfo{
-        text-align: center;
-        margin-bottom: p.pxtoem(40);
-        font-size: p.pxtoem(10);
-        font-family: 'Open Sans', sans-serif;
-    };
+    
 };
