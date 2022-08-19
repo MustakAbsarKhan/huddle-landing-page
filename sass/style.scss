@@ -1,39 +1,45 @@
 @use "partials" as p;
 
 body{
-    margin: 0;
-    padding: 0;
     @include p.breakpoint-down(medium){
         width: p.pxtoem(375);
     };
-}
+};
 
 .container{
     //mobile view
     @include p.breakpoint-down(medium){
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
         background: p.color(Violet-col) url(/images/bg-mobile.svg) no-repeat;
     };
     & .logo >img{
         @include p.breakpoint-down(medium){
-            height: p.pxtoem(21);
-            width: p.pxtoem(122);
-            margin: p.pxtoem(40) p.pxtoem(0) p.pxtoem(72) p.pxtoem(40);
+            height: p.pxtoem(20);
+            margin: p.pxtoem(35) 0 p.pxtoem(65) p.pxtoem(37);
         };
     }
     & .body-img>img{
         @include p.breakpoint-down(medium){
-            height: p.pxtoem(213);
+            height: p.pxtoem(211);
             width: p.pxtoem(298);
-            margin: p.pxtoem(0) p.pxtoem(39) p.pxtoem(71) p.pxtoem(38);
+            margin-left: p.pxtoem(38.5);
         };
     };
-    & .middle-body>.body-text{
+    & .middle-body{
         @include p.breakpoint-down(medium){
-            width: p.pxtoem(262);
-            & h1{
-                font-size: p.pxtoem(22);
-                text-align: center;          
-            }
+            & .body-text{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                & h1{
+                    font-size: p.pxtoem(20);
+                    margin-left: p.pxtoem(59);
+                    margin-right: p.pxtoem(57);
+                    line-height: p.pxtoem(20);          
+                };
+            };
         };
     };
 };

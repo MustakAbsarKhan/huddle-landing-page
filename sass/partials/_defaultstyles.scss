@@ -1,0 +1,21 @@
+@use "colors" as col;
+
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+};
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+};
+body{
+    font-family: 'Open Sans', sans-serif;
+    color:col.color(text-color);
+};
+h1{
+    font-family: 'Poppins', sans-serif;
+    color:col.color(text-color);
+};

@@ -1,7 +1,26 @@
-body {
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #FFFFFF;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  color: #FFFFFF;
+}
+
 @media (max-width: 63.9375em) {
   body {
     width: 23.4375em;
@@ -10,29 +29,35 @@ body {
 
 @media (max-width: 63.9375em) {
   .container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
     background: hsl(257deg, 40%, 49%) url(/images/bg-mobile.svg) no-repeat;
   }
 }
 @media (max-width: 63.9375em) {
   .container .logo > img {
-    height: 1.3125em;
-    width: 7.625em;
-    margin: 2.5em 0em 4.5em 2.5em;
+    height: 1.25em;
+    margin: 2.1875em 0 4.0625em 2.3125em;
   }
 }
 @media (max-width: 63.9375em) {
   .container .body-img > img {
-    height: 13.3125em;
+    height: 13.1875em;
     width: 18.625em;
-    margin: 0em 2.4375em 4.4375em 2.375em;
+    margin-left: 2.40625em;
   }
 }
 @media (max-width: 63.9375em) {
-  .container .middle-body > .body-text {
-    width: 16.375em;
-  }
-  .container .middle-body > .body-text h1 {
-    font-size: 1.375em;
+  .container .middle-body .body-text {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+  }
+  .container .middle-body .body-text h1 {
+    font-size: 1.25em;
+    margin-left: 3.6875em;
+    margin-right: 3.5625em;
+    line-height: 1.25em;
   }
 }/*# sourceMappingURL=style.css.map */

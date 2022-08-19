@@ -1,6 +1,7 @@
 $color:(
     "Violet-col": hsl(257, 40%, 49%),
-    "Soft-Magenta-col": hsl(300, 69%, 71%)
+    "Soft-Magenta-col": hsl(300, 69%, 71%),
+    "text-color":#FFFFFF
 );
 
 @function color($color-name){
