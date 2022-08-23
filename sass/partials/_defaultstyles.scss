@@ -1,4 +1,5 @@
 @use "colors" as col;
+@use "breakpoint" as br;
 
 html{
     box-sizing: border-box;
@@ -14,8 +15,12 @@ html{
 body{
     font-family: 'Open Sans', sans-serif;
     color:col.color(text-color);
+    min-height: 100vh;
+    background: col.color(Violet-col) url(../../images/bg-desktop.svg) no-repeat;
+    @include br.breakpoint-down(small){
+        background: col.color(Violet-col) url(../../images/bg-mobile.svg) no-repeat; 
+    };
 };
 h1{
     font-family: 'Poppins', sans-serif;
-    color:col.color(text-color);
 };

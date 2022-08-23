@@ -3,3 +3,12 @@
 @function pxtoem($px){
    @return math.div($px,16)+em;
 };
+
+//1440px default width
+@function pxtovw($px){
+   @return math.div($px*100,1440)+vw;
+};
+//375px default width
+@function pxtovwMob($px){
+   @return math.div($px*100,375)+vw;
+};

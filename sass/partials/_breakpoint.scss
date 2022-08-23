@@ -1,9 +1,8 @@
-@use "converter" as conv;
 
-//640px, 1024px,1400px
-$breakpoints-up:("medium":conv.pxtoem(640),"large":conv.pxtoem(1024),"xlarge":conv.pxtoem(1400));
-//639px,1023px,1399px
-$breakpoints-down:("ultsmall":conv.pxtoem(376),"small":conv.pxtoem(639),"medium":conv.pxtoem(1023),"large":conv.pxtoem(1399));
+//376px,640px, 1024px,1440px
+$breakpoints-up:("ultsmall":376px,"medium":640px,"large":1024px,"xlarge":1440px);
+//375px,639px,1023px,1439px
+$breakpoints-down:("ultsmall":375px,"small":639px,"medium":912px,"large":1439px);
 
 @mixin breakpoint-up($size) {
     @media (min-width:map-get($breakpoints-up,$size)) {
