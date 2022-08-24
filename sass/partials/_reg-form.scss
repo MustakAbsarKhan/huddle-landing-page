@@ -2,58 +2,75 @@
   
   /* The popup form - hidden by default */
   .form-popup {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    right: 2%;
-    margin-left: 2%;
-    border: 3px solid #f1f1f1;
-    z-index: 9;
-  };
+        display: none;
+        position: fixed;
+        bottom: 0;
+        right: 2%;
+        margin-left: 2%;
+        border: 3px solid #f1f1f1;
+        z-index: 9;
+        font-family: 'Open Sans', sans-serif;
+        
+        /* Add styles to the form container */
+        & .form-container {
+            max-width: 400px;
+            padding: 10px;
+            background-color: white;
+            /* Full-width input fields */
+            & input[type=text], input[type=email] {
+              width: 100%;
+              padding: 4%;
+              margin: 0 0 20px 0;
+              border: none;
+              background: #f1f1f1;
+            };
+            & input[type=email]{
+                margin-bottom: 20px;
+                margin-top: 20px;
+            };
+            
+            /* When the inputs get focus, do something */
+            & input[type=text]:focus, input[type=email]:focus {
+              background-color: #ddd;
+              outline: none;
+            };
+            
+            /* Set a style for the submit/login button */
+            & .btn {
+              background-color: #04AA6D;
+              color: white;
+              padding: 3.95% 5.266%;
+              border: none;
+              cursor: pointer;
+              width: 100%;
+              margin-bottom:10px;
+              opacity: 0.8;
+              font-family: 'Poppins', sans-serif;
+            };
+            
+            /* Add a red background color to the cancel button */
+            & .cancel {
+              background-color: red;
+              font-family: 'Poppins', sans-serif;
+            };
+            
+            /* Add some hover effects to buttons */
+            & .btn:hover, .open-button:hover {
+              opacity: 1;
+            };
+        };
+    };
   
-  /* Add styles to the form container */
-  .form-container {
-    max-width: 400px;
-    padding: 10px;
-    background-color: white;
-  };
   
-  /* Full-width input fields */
-  .form-container input[type=text], .form-container input[type=email] {
-    width: 100%;
-    padding: 4%;
-    margin: 0 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-  };
-  .form-container input[type=email]{
-    margin-bottom: 0px;
-  };
+
+  /* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+};
   
-  /* When the inputs get focus, do something */
-  .form-container input[type=text]:focus, .form-container input[type=email]:focus {
-    background-color: #ddd;
-    outline: none;
-  };
-  
-  /* Set a style for the submit/login button */
-  .form-container .btn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom:10px;
-    opacity: 0.8;
-  };
-  
-  /* Add a red background color to the cancel button */
-  .form-container .cancel {
-    background-color: red;
-  };
-  
-  /* Add some hover effects to buttons */
-  .form-container .btn:hover, .open-button:hover {
-    opacity: 1;
-  };
+  /* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+};
