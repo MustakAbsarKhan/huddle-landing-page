@@ -82,6 +82,51 @@ h1 {
 .form-popup .form-container .btn:hover, .form-popup .form-container .open-button:hover {
   opacity: 1;
 }
+.form-popup .form-container input:invalid:focus:not(:-moz-placeholder-shown) {
+  border: 2px solid #FFFF33;
+}
+.form-popup .form-container input:invalid:focus:not(:-ms-input-placeholder) {
+  border: 2px solid #FFFF33;
+}
+.form-popup .form-container input:invalid:focus:not(:placeholder-shown) {
+  border: 2px solid #FFFF33;
+}
+.form-popup .form-container input:invalid:focus:not(:-ms-input-placeholder) {
+  border: 2px solid #FFFF33;
+}
+.form-popup .form-container input:invalid:focus:not(:-moz-placeholder) {
+  border: 2px solid #FFFF33;
+}
+.form-popup .form-container input:valid:not(:-moz-placeholder-shown) {
+  border: 2px solid #39FF14;
+}
+.form-popup .form-container input:valid:not(:-ms-input-placeholder) {
+  border: 2px solid #39FF14;
+}
+.form-popup .form-container input:valid:not(:placeholder-shown) {
+  border: 2px solid #39FF14;
+}
+.form-popup .form-container input:valid:not(:-ms-input-placeholder) {
+  border: 2px solid #39FF14;
+}
+.form-popup .form-container input:valid:not(:-moz-placeholder) {
+  border: 2px solid #39FF14;
+}
+.form-popup .form-container input:invalid:not(:-moz-placeholder-shown) {
+  border: 2px solid #FF3131;
+}
+.form-popup .form-container input:invalid:not(:-ms-input-placeholder) {
+  border: 2px solid #FF3131;
+}
+.form-popup .form-container input:invalid:not(:placeholder-shown) {
+  border: 2px solid #FF3131;
+}
+.form-popup .form-container input:invalid:not(:-ms-input-placeholder) {
+  border: 2px solid #FF3131;
+}
+.form-popup .form-container input:invalid:not(:-moz-placeholder) {
+  border: 2px solid #FF3131;
+}
 
 /* The typing effect */
 @-webkit-keyframes typing {
