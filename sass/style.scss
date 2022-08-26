@@ -90,8 +90,10 @@
                 };
 
                 & .body-button{
+                    visibility: hidden;
                     text-align: left;
                     margin-left: 6%;
+                    animation: slideInFromLeft 2s linear 5s forwards;
                     @include p.breakpoint-down(medium){
                         text-align: center;
                         margin-left: 0%;
@@ -109,6 +111,7 @@
                         margin-top: 4%;
                         font-size: p.pxtovw(17);//17px;
                         font-family: 'Open Sans', sans-serif;
+
                         @include p.breakpoint-down(medium){
                             height: p.pxtovwMob(40);//50px;
                             width: p.pxtovwMob(185);//190px;
