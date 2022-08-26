@@ -4,8 +4,8 @@ let bodyparaTXT = document.querySelector(".body-p");
 let text = "Build The Community Your Fans Will Love";
 let textp = "Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion."
 
-let speed = 60;
-let speedp = 70;
+let speed = 40;
+let speedp = 40;
 
 let i = 0;
 let p = 0;

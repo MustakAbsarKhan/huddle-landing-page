@@ -1,5 +1,6 @@
 @use "converter" as conv;
 @use "colors" as col;
+@use "effects" as eff;
   
   /* The popup form - hidden by default */
   .form-popup {
@@ -81,14 +82,23 @@
               border: 2px solid col.color(valid);
             };
             
-            & input:invalid:not(:placeholder-shown){//if invalid
+            & input:invalid:not(:focus):not(:placeholder-shown){//if invalid
               border: 2px solid col.color(invalid);
+              animation: shake 0.5s;
             };
-            & input:invalid:not(:-ms-input-placeholder){//if invalid
+            & input:invalid:not(:focus):not(:placeholder-shown){//if invalid
               border: 2px solid col.color(invalid);
+              animation: shake 0.5s;
+              -webkit-animation: shake 0.5s;
             };
-            & input:invalid:not(:-moz-placeholder){//if invalid
+            & input:invalid:not(:focus):not(:-ms-input-placeholder){//if invalid
               border: 2px solid col.color(invalid);
+              animation: shake 0.5s;
+            };
+            & input:invalid:not(:focus):not(:-moz-placeholder){//if invalid
+              border: 2px solid col.color(invalid);
+              animation: shake 0.5s;
+              -moz-animation: shake 0.5s;
             };
         };
     };

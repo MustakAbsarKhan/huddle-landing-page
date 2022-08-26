@@ -93,7 +93,7 @@
                     visibility: hidden;
                     text-align: left;
                     margin-left: 6%;
-                    animation: slideInFromLeft 2s linear 8s forwards;//animation- slide button to the left
+                    animation: slideInFromLeft 2s linear 5s forwards;//animation- slide button to the left
                     @include p.breakpoint-down(medium){
                         text-align: center;
                         margin-left: 0%;
