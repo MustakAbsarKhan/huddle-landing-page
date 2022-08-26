@@ -11,7 +11,7 @@
         flex-direction: column;
         justify-content: space-between;
         height: 90%;
-        margin-top: 4.5%;
+        margin-top: 5%;
         margin-left: 6%;
         margin-right: 0.6%;
         @include p.breakpoint-down(medium){
@@ -93,7 +93,7 @@
                     visibility: hidden;
                     text-align: left;
                     margin-left: 6%;
-                    animation: slideInFromLeft 2s linear 8s forwards;//animation to slide in the button
+                    animation: slideInFromLeft 2s linear 8s forwards;//animation- slide button to the left
                     @include p.breakpoint-down(medium){
                         text-align: center;
                         margin-left: 0%;
@@ -129,7 +129,7 @@
         };
     };
     & .footer{
-        margin-top: 0.5%;
+        margin-top: 1.5%;
         text-align: end;
         margin-right: 6%;
         @include p.breakpoint-down(medium){
