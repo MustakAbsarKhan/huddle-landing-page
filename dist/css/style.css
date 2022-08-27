@@ -389,8 +389,8 @@ h1 {
   visibility: hidden;
   text-align: left;
   margin-left: 6%;
-  -webkit-animation: slideInFromLeft 2s linear 5s forwards;
-          animation: slideInFromLeft 2s linear 5s forwards;
+  -webkit-animation: slideInFromLeft 1s linear 5s forwards;
+          animation: slideInFromLeft 1s linear 5s forwards;
 }
 @media (max-width: 912px) {
   .container .wrapper .body-content .middle-body .body-button {
